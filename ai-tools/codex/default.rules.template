@@ -1,0 +1,5 @@
+# Keep only reusable approvals here. Do not migrate one-off destructive rm rules.
+prefix_rule(pattern=["codex", "plugin", "add"], decision="allow")
+prefix_rule(pattern=["lark-cli", "auth", "login"], decision="allow")
+prefix_rule(pattern=["lark-cli", "auth", "status"], decision="allow")
+

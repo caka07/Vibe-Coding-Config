@@ -1,0 +1,79 @@
+notify = [
+  "${CODEX_APP}/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient",
+  "turn-ended"
+]
+model = "gpt-5.5"
+model_reasoning_effort = "xhigh"
+service_tier = "fast"
+
+[mcp_servers.node_repl]
+type = "stdio"
+command = "${CODEX_APP}/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+  [mcp_servers.node_repl.env]
+  BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+  BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+  CODEX_CLI_PATH = "${CODEX_APP}/Contents/Resources/codex"
+  CODEX_HOME = "${HOME}/.codex"
+  NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+  NODE_REPL_NODE_MODULE_DIRS = "${CODEX_APP}/Contents/Resources/cua_node/lib/node_modules"
+  NODE_REPL_NODE_PATH = "${CODEX_APP}/Contents/Resources/cua_node/bin/node"
+  NODE_REPL_TRUSTED_CODE_PATHS = "${HOME}/.codex"
+
+[mcp_servers.bytedcli]
+command = "${HOMEBREW_PREFIX}/bin/bytedcli"
+args = [ "mcp" ]
+
+[features]
+hooks = true
+js_repl = false
+
+[projects."<WORKSPACE_ROOT>"]
+trust_level = "trusted"
+
+[tui]
+status_line = [
+  "model-with-reasoning",
+  "context-remaining",
+  "five-hour-limit",
+  "weekly-limit",
+  "git-branch",
+  "current-dir"
+]
+status_line_use_colors = true
+session_picker_view = "comfortable"
+
+[plugins."superpowers@openai-curated"]
+enabled = true
+
+[plugins."documents@openai-primary-runtime"]
+enabled = true
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = true
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = true
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."computer-use@openai-bundled"]
+enabled = true
+
+[plugins."chrome@openai-bundled"]
+enabled = true
+
+[notice]
+hide_rate_limit_model_nudge = true
+
+[desktop]
+followUpQueueMode = "queue"
+

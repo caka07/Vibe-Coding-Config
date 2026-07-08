@@ -1,0 +1,95 @@
+{
+  "effortLevel": "high",
+  "enabledPlugins": {
+    "claude-hud@claude-hud": true,
+    "claude-mem@thedotmack": true,
+    "code-review@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
+  },
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN>",
+    "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-opus-4-8[1M]",
+    "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "claude-opus-4-8",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-pro[1M]",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "deepseek-v4-pro",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-pro[1M]",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "deepseek-v4-pro",
+    "ANTHROPIC_MODEL": "deepseek-v4-pro",
+    "ENABLE_PROMPT_CACHING_1H": "1",
+    "ENABLE_TOOL_SEARCH": "true"
+  },
+  "extraKnownMarketplaces": {
+    "claude-hud": {
+      "source": {
+        "repo": "jarrodwatts/claude-hud",
+        "source": "github"
+      }
+    },
+    "thedotmack": {
+      "source": {
+        "repo": "thedotmack/claude-mem",
+        "source": "github"
+      }
+    }
+  },
+  "model": "claude-opus-4-8",
+  "skillOverrides": {
+    "claude-api": "off"
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "statusLine": {
+    "type": "command",
+    "command": "${HOME}/.flux/bin/flux-statusline"
+  },
+  "theme": "dark",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+            "timeout": 86400
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+          }
+        ]
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,50 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source codex",
+            "type": "command",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source codex",
+            "type": "command",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source codex",
+            "type": "command",
+            "timeout": 86400
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source codex",
+            "type": "command",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
+

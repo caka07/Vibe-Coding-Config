@@ -1,0 +1,11 @@
+export HOMEBREW_PREFIX="${HOMEBREW_PREFIX:-${HOMEBREW_PREFIX}}"
+export ANACONDA_PREFIX="${ANACONDA_PREFIX:-${HOMEBREW_PREFIX}/anaconda3}"
+
+if [ -x "${HOMEBREW_PREFIX}/bin/brew" ]; then
+  eval "$("${HOMEBREW_PREFIX}/bin/brew" shellenv bash)"
+fi
+
+if [ -f "${ANACONDA_PREFIX}/etc/profile.d/conda.sh" ]; then
+  . "${ANACONDA_PREFIX}/etc/profile.d/conda.sh"
+fi
+

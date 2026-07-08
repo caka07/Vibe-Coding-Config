@@ -1,0 +1,1318 @@
+{
+  "providers": [
+    {
+      "app_type": "claude",
+      "name": "Daodun",
+      "settings_config": {
+        "effortLevel": "high",
+        "enabledPlugins": {
+          "claude-hud@claude-hud": true,
+          "claude-mem@thedotmack": true,
+          "code-review@claude-plugins-official": true,
+          "frontend-design@claude-plugins-official": true,
+          "pyright-lsp@claude-plugins-official": true,
+          "skill-creator@claude-plugins-official": true,
+          "superpowers@claude-plugins-official": true
+        },
+        "env": {
+          "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN_PLACEHOLDER>",
+          "ANTHROPIC_BASE_URL": "https://daodunapi.com",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable-5[1M]",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "claude-fable-5",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-8[1M]",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5[1M]",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "claude-sonnet-5",
+          "ANTHROPIC_MODEL": "claude-opus-4-8[1M]",
+          "ENABLE_PROMPT_CACHING_1H": "1",
+          "ENABLE_TOOL_SEARCH": "true"
+        },
+        "extraKnownMarketplaces": {
+          "claude-hud": {
+            "source": {
+              "repo": "jarrodwatts/claude-hud",
+              "source": "github"
+            }
+          },
+          "thedotmack": {
+            "source": {
+              "repo": "thedotmack/claude-mem",
+              "source": "github"
+            }
+          }
+        },
+        "hooks": {
+          "Notification": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PermissionRequest": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "timeout": 86400,
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PostToolUse": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            },
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse",
+                  "type": "command"
+                }
+              ],
+              "matcher": "Write|Edit|MultiEdit"
+            }
+          ],
+          "PostToolUseFailure": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PreCompact": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "PreToolUse": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "SessionEnd": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "SessionStart": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "Stop": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "StopFailure": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "SubagentStart": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "SubagentStop": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "UserPromptSubmit": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ]
+        },
+        "model": "claude-opus-4-8[1M]",
+        "skillOverrides": {
+          "claude-api": "off"
+        },
+        "skipDangerousModePermissionPrompt": true,
+        "statusLine": {
+          "command": "${HOME}/.flux/bin/flux-statusline",
+          "type": "command"
+        },
+        "theme": "dark"
+      },
+      "website_url": "https://daodunapi.com",
+      "category": null,
+      "notes": null,
+      "icon": "anthropic",
+      "icon_color": "#D4915D",
+      "meta": {
+        "commonConfigEnabled": false,
+        "endpointAutoSelect": true,
+        "apiFormat": "anthropic"
+      },
+      "is_current": 0,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": [
+        "https://daodunapi.com"
+      ]
+    },
+    {
+      "app_type": "claude",
+      "name": "Dasu",
+      "settings_config": {
+        "effortLevel": "high",
+        "enabledPlugins": {
+          "claude-hud@claude-hud": true,
+          "claude-mem@thedotmack": true,
+          "code-review@claude-plugins-official": true,
+          "frontend-design@claude-plugins-official": true,
+          "pyright-lsp@claude-plugins-official": true,
+          "skill-creator@claude-plugins-official": true,
+          "superpowers@claude-plugins-official": true
+        },
+        "env": {
+          "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN_PLACEHOLDER>",
+          "ANTHROPIC_BASE_URL": "https://dasuapi.com",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable-5[1M]",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "claude-fable-5",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME": "claude-haiku-4-5",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-8[1M]",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5[1M]",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "claude-sonnet-5",
+          "ANTHROPIC_MODEL": "claude-opus-4-8[1M]",
+          "ENABLE_PROMPT_CACHING_1H": "1",
+          "ENABLE_TOOL_SEARCH": "true"
+        },
+        "extraKnownMarketplaces": {
+          "claude-hud": {
+            "source": {
+              "repo": "jarrodwatts/claude-hud",
+              "source": "github"
+            }
+          },
+          "thedotmack": {
+            "source": {
+              "repo": "thedotmack/claude-mem",
+              "source": "github"
+            }
+          }
+        },
+        "hooks": {
+          "Notification": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PermissionRequest": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "timeout": 86400,
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PostToolUse": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            },
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse",
+                  "type": "command"
+                }
+              ],
+              "matcher": "Write|Edit|MultiEdit"
+            }
+          ],
+          "PostToolUseFailure": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PreCompact": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "PreToolUse": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "SessionEnd": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "SessionStart": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "Stop": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "StopFailure": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "SubagentStart": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "SubagentStop": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop",
+                  "type": "command"
+                }
+              ]
+            }
+          ],
+          "UserPromptSubmit": [
+            {
+              "hooks": [
+                {
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "type": "command"
+                }
+              ]
+            }
+          ]
+        },
+        "skillOverrides": {
+          "claude-api": "off"
+        },
+        "skipDangerousModePermissionPrompt": true,
+        "statusLine": {
+          "command": "${HOME}/.flux/bin/flux-statusline",
+          "type": "command"
+        },
+        "theme": "dark"
+      },
+      "website_url": "https://dasuapi.com",
+      "category": null,
+      "notes": null,
+      "icon": "anthropic",
+      "icon_color": "#D4915D",
+      "meta": {
+        "commonConfigEnabled": false,
+        "endpointAutoSelect": true,
+        "apiFormat": "anthropic"
+      },
+      "is_current": 0,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": [
+        "https://dasuapi.com"
+      ]
+    },
+    {
+      "app_type": "claude",
+      "name": "DeepSeek",
+      "settings_config": {
+        "env": {
+          "ANTHROPIC_BASE_URL": "https://api.deepseek.com/anthropic",
+          "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN_PLACEHOLDER>",
+          "ANTHROPIC_MODEL": "deepseek-v4-pro",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL": "deepseek-v4-flash",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL": "deepseek-v4-pro[1M]",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL": "deepseek-v4-pro[1M]",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "deepseek-v4-pro",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "deepseek-v4-pro"
+        }
+      },
+      "website_url": "https://platform.deepseek.com",
+      "category": "cn_official",
+      "notes": null,
+      "icon": "deepseek",
+      "icon_color": "#1E88E5",
+      "meta": {
+        "commonConfigEnabled": true,
+        "endpointAutoSelect": true,
+        "apiFormat": "anthropic"
+      },
+      "is_current": 1,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": [
+        "https://api.deepseek.com/anthropic"
+      ]
+    },
+    {
+      "app_type": "claude",
+      "name": "Neko",
+      "settings_config": {
+        "env": {
+          "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN_PLACEHOLDER>",
+          "ANTHROPIC_BASE_URL": "https://nekocode.ai",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable-5[1M]",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "claude-fable-5",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME": "claude-haiku-4-5",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-8[1M]",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5[1M]",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "claude-sonnet-5",
+          "ANTHROPIC_MODEL": "claude-opus-4-8[1M]",
+          "ENABLE_PROMPT_CACHING_1H": "1",
+          "ENABLE_TOOL_SEARCH": "true"
+        },
+        "skillOverrides": {
+          "claude-api": "off"
+        },
+        "hooks": {
+          "Notification": [
+            {
+              "matcher": "*",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "PermissionRequest": [
+            {
+              "matcher": "*",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "timeout": 86400
+                }
+              ]
+            }
+          ],
+          "PostToolUse": [
+            {
+              "matcher": "*",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            },
+            {
+              "matcher": "Write|Edit|MultiEdit",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
+                }
+              ]
+            }
+          ],
+          "PostToolUseFailure": [
+            {
+              "matcher": "*",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "PreCompact": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "PreToolUse": [
+            {
+              "matcher": "*",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SessionEnd": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SessionStart": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "Stop": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
+                }
+              ]
+            }
+          ],
+          "StopFailure": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SubagentStart": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SubagentStop": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
+                }
+              ]
+            }
+          ],
+          "UserPromptSubmit": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ]
+        },
+        "statusLine": {
+          "type": "command",
+          "command": "${HOME}/.flux/bin/flux-statusline"
+        },
+        "enabledPlugins": {
+          "claude-hud@claude-hud": true,
+          "claude-mem@thedotmack": true,
+          "code-review@claude-plugins-official": true,
+          "frontend-design@claude-plugins-official": true,
+          "pyright-lsp@claude-plugins-official": true,
+          "skill-creator@claude-plugins-official": true,
+          "superpowers@claude-plugins-official": true
+        },
+        "extraKnownMarketplaces": {
+          "claude-hud": {
+            "source": {
+              "source": "github",
+              "repo": "jarrodwatts/claude-hud"
+            }
+          },
+          "thedotmack": {
+            "source": {
+              "source": "github",
+              "repo": "thedotmack/claude-mem"
+            }
+          }
+        },
+        "effortLevel": "high",
+        "skipDangerousModePermissionPrompt": true,
+        "theme": "dark"
+      },
+      "website_url": "https://nekocode.ai",
+      "category": null,
+      "notes": null,
+      "icon": "anthropic",
+      "icon_color": "#D4915D",
+      "meta": {
+        "commonConfigEnabled": false,
+        "endpointAutoSelect": true,
+        "apiFormat": "anthropic"
+      },
+      "is_current": 0,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": [
+        "https://nekocode.ai"
+      ]
+    },
+    {
+      "app_type": "claude",
+      "name": "RightCode",
+      "settings_config": {
+        "env": {
+          "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN_PLACEHOLDER>",
+          "ANTHROPIC_BASE_URL": "https://www.right.codes/claude",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME": "claude-haiku-4-5",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-8[1M]",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5[1M]",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "claude-sonnet-5",
+          "ANTHROPIC_MODEL": "claude-opus-4-8[1M]",
+          "ENABLE_PROMPT_CACHING_1H": "1",
+          "ENABLE_TOOL_SEARCH": "true",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable-5[1M]",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "claude-fable-5"
+        },
+        "effortLevel": "high",
+        "enabledPlugins": {
+          "claude-hud@claude-hud": true,
+          "claude-mem@thedotmack": true,
+          "code-review@claude-plugins-official": true,
+          "frontend-design@claude-plugins-official": true,
+          "pyright-lsp@claude-plugins-official": true,
+          "skill-creator@claude-plugins-official": true,
+          "superpowers@claude-plugins-official": true
+        },
+        "extraKnownMarketplaces": {
+          "claude-hud": {
+            "source": {
+              "repo": "jarrodwatts/claude-hud",
+              "source": "github"
+            }
+          },
+          "thedotmack": {
+            "source": {
+              "repo": "thedotmack/claude-mem",
+              "source": "github"
+            }
+          }
+        },
+        "model": "claude-opus-4-8[1M]",
+        "skillOverrides": {
+          "claude-api": "off"
+        },
+        "skipDangerousModePermissionPrompt": true,
+        "statusLine": {
+          "type": "command",
+          "command": "${HOME}/.flux/bin/flux-statusline"
+        },
+        "theme": "dark",
+        "hooks": {
+          "UserPromptSubmit": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SessionStart": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SessionEnd": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "Stop": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
+                }
+              ]
+            }
+          ],
+          "StopFailure": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SubagentStart": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SubagentStop": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
+                }
+              ]
+            }
+          ],
+          "Notification": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PreToolUse": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PermissionRequest": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "timeout": 86400
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PostToolUse": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ],
+              "matcher": "*"
+            },
+            {
+              "matcher": "Write|Edit|MultiEdit",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
+                }
+              ]
+            }
+          ],
+          "PostToolUseFailure": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PreCompact": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "website_url": "https://www.right.codes",
+      "category": "third_party",
+      "notes": null,
+      "icon": "rc",
+      "icon_color": "#E96B2C",
+      "meta": {
+        "commonConfigEnabled": false,
+        "endpointAutoSelect": true,
+        "apiFormat": "anthropic"
+      },
+      "is_current": 0,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": [
+        "https://www.right.codes/claude"
+      ]
+    },
+    {
+      "app_type": "claude",
+      "name": "hao.ai",
+      "settings_config": {
+        "env": {
+          "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN_PLACEHOLDER>",
+          "ANTHROPIC_BASE_URL": "https://api.hao.ai/anthropic",
+          "ENABLE_PROMPT_CACHING_1H": "1",
+          "ENABLE_TOOL_SEARCH": "true",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable-5[1M]",
+          "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "claude-fable-5",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-5[1M]",
+          "ANTHROPIC_DEFAULT_SONNET_MODEL_NAME": "claude-sonnet-5",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-8[1M]",
+          "ANTHROPIC_DEFAULT_OPUS_MODEL_NAME": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
+          "ANTHROPIC_DEFAULT_HAIKU_MODEL_NAME": "claude-haiku-4-5",
+          "ANTHROPIC_MODEL": "claude-opus-4-8[1m]"
+        },
+        "effortLevel": "high",
+        "enabledPlugins": {
+          "claude-hud@claude-hud": true,
+          "claude-mem@thedotmack": true,
+          "code-review@claude-plugins-official": true,
+          "frontend-design@claude-plugins-official": true,
+          "pyright-lsp@claude-plugins-official": true,
+          "skill-creator@claude-plugins-official": true,
+          "superpowers@claude-plugins-official": true
+        },
+        "extraKnownMarketplaces": {
+          "claude-hud": {
+            "source": {
+              "repo": "jarrodwatts/claude-hud",
+              "source": "github"
+            }
+          },
+          "thedotmack": {
+            "source": {
+              "repo": "thedotmack/claude-mem",
+              "source": "github"
+            }
+          }
+        },
+        "model": "claude-opus-4-8",
+        "skillOverrides": {
+          "claude-api": "off"
+        },
+        "skipDangerousModePermissionPrompt": true,
+        "statusLine": {
+          "type": "command",
+          "command": "${HOME}/.flux/bin/flux-statusline"
+        },
+        "theme": "dark",
+        "hooks": {
+          "UserPromptSubmit": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SessionStart": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SessionEnd": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "Stop": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
+                }
+              ]
+            }
+          ],
+          "StopFailure": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SubagentStart": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ],
+          "SubagentStop": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            },
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
+                }
+              ]
+            }
+          ],
+          "Notification": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PreToolUse": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PermissionRequest": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude",
+                  "timeout": 86400
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PostToolUse": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ],
+              "matcher": "*"
+            },
+            {
+              "matcher": "Write|Edit|MultiEdit",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
+                }
+              ]
+            }
+          ],
+          "PostToolUseFailure": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ],
+              "matcher": "*"
+            }
+          ],
+          "PreCompact": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-hooks' --source claude"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "website_url": "https://api.hao.ai",
+      "category": null,
+      "notes": null,
+      "icon": "anthropic",
+      "icon_color": "#D4915D",
+      "meta": {
+        "commonConfigEnabled": false,
+        "endpointAutoSelect": true,
+        "apiFormat": "anthropic"
+      },
+      "is_current": 0,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": [
+        "https://api.hao.ai/anthropic"
+      ]
+    },
+    {
+      "app_type": "claude",
+      "name": "Claude Official",
+      "settings_config": {},
+      "website_url": "https://www.anthropic.com/claude-code",
+      "category": "official",
+      "notes": null,
+      "icon": "anthropic",
+      "icon_color": "#D4915D",
+      "meta": {
+        "commonConfigEnabled": true,
+        "endpointAutoSelect": true
+      },
+      "is_current": 0,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": []
+    },
+    {
+      "app_type": "claude-desktop",
+      "name": "Claude Desktop Official",
+      "settings_config": {
+        "env": {}
+      },
+      "website_url": "https://claude.ai/download",
+      "category": "official",
+      "notes": null,
+      "icon": "anthropic",
+      "icon_color": "#D4915D",
+      "meta": {},
+      "is_current": 0,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": []
+    },
+    {
+      "app_type": "codex",
+      "name": "OpenAI Official",
+      "settings_config": {
+        "auth": "<AUTH_PLACEHOLDER>",
+        "config": "\n[mcp_servers]\n[mcp_servers.node_repl]\ntype = \"stdio\"\n\n[skills]\n[[skills.config]]\npath = \"${HOME}/.agents/skills/find-skills/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/brainstorming/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/dispatching-parallel-agents/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/executing-plans/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/finishing-a-development-branch/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/receiving-code-review/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/requesting-code-review/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/subagent-driven-development/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/systematic-debugging/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/test-driven-development/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/using-git-worktrees/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/using-superpowers/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/verification-before-completion/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/writing-plans/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-curated/superpowers/c6ea566d/skills/writing-skills/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/skills/.system/imagegen/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/skills/.system/openai-docs/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/skills/.system/plugin-creator/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/skills/.system/skill-creator/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/skills/.system/skill-installer/SKILL.md\"\nenabled = false\n\n[[skills.config]]\npath = \"${HOME}/.codex/plugins/cache/openai-bundled/browser/26.609.71450/skills/control-in-app-browser/SKILL.md\"\nenabled = false\n"
+      },
+      "website_url": "https://chatgpt.com/codex",
+      "category": "official",
+      "notes": null,
+      "icon": "openai",
+      "icon_color": "#00A67E",
+      "meta": {
+        "commonConfigEnabled": true,
+        "endpointAutoSelect": true
+      },
+      "is_current": 1,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": []
+    },
+    {
+      "app_type": "gemini",
+      "name": "Google Official",
+      "settings_config": {
+        "env": {},
+        "config": {}
+      },
+      "website_url": "https://ai.google.dev/",
+      "category": "official",
+      "notes": null,
+      "icon": "gemini",
+      "icon_color": "#4285F4",
+      "meta": {},
+      "is_current": 0,
+      "in_failover_queue": 0,
+      "cost_multiplier": "1.0",
+      "limit_daily_usd": null,
+      "limit_monthly_usd": null,
+      "provider_type": null,
+      "id": "<PROVIDER_ID>",
+      "endpoints": []
+    }
+  ]
+}

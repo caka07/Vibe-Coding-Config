@@ -1,0 +1,32 @@
+{
+  "showInTray": true,
+  "minimizeToTrayOnClose": true,
+  "useAppWindowControls": false,
+  "enableClaudePluginIntegration": false,
+  "skipClaudeOnboarding": true,
+  "launchOnStartup": false,
+  "silentStartup": false,
+  "enableLocalProxy": false,
+  "usageConfirmed": true,
+  "enableFailoverToggle": false,
+  "preserveCodexOfficialAuthOnSwitch": true,
+  "unifyCodexSessionHistory": false,
+  "firstRunNoticeConfirmed": true,
+  "commonConfigConfirmed": true,
+  "language": "zh",
+  "visibleApps": {
+    "claude": true,
+    "claude-desktop": false,
+    "codex": true,
+    "gemini": false,
+    "opencode": false,
+    "openclaw": false,
+    "hermes": false
+  },
+  "currentProviderClaude": "<PROVIDER_ID>",
+  "currentProviderCodex": "codex-official",
+  "skillSyncMethod": "auto",
+  "skillStorageLocation": "cc_switch",
+  "preferredTerminal": "iterm2"
+}
+

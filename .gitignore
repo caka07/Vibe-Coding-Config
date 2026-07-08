@@ -1,0 +1,31 @@
+.DS_Store
+
+# Secrets and local auth
+*.env
+.env*
+*auth*.json
+*token*
+hosts.yml
+auth.json
+
+# Local state
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+history.jsonl
+session_index.jsonl
+sessions/
+cache/
+logs/
+tmp/
+__pycache__/
+
+# Tool-specific state
+.claude.json
+projects/
+session-env/
+file-history/
+paste-cache/
+chroma/
+
