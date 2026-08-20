@@ -16,7 +16,7 @@
         },
         "env": {
           "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN_PLACEHOLDER>",
-          "ANTHROPIC_BASE_URL": "https://daodunapi.com",
+          "ANTHROPIC_BASE_URL": "<CLAUDE_COMPATIBLE_BASE_URL>",
           "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable-5[1M]",
           "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "claude-fable-5",
           "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
@@ -80,7 +80,7 @@
             {
               "hooks": [
                 {
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse",
                   "type": "command"
                 }
               ],
@@ -151,7 +151,7 @@
             {
               "hooks": [
                 {
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop",
                   "type": "command"
                 }
               ]
@@ -189,7 +189,7 @@
             {
               "hooks": [
                 {
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop",
                   "type": "command"
                 }
               ]
@@ -217,7 +217,7 @@
         },
         "theme": "dark"
       },
-      "website_url": "https://daodunapi.com",
+      "website_url": "<CLAUDE_COMPATIBLE_BASE_URL>",
       "category": null,
       "notes": null,
       "icon": "anthropic",
@@ -235,7 +235,7 @@
       "provider_type": null,
       "id": "<PROVIDER_ID>",
       "endpoints": [
-        "https://daodunapi.com"
+        "<CLAUDE_COMPATIBLE_BASE_URL>"
       ]
     },
     {
@@ -254,7 +254,7 @@
         },
         "env": {
           "ANTHROPIC_AUTH_TOKEN": "<ANTHROPIC_AUTH_TOKEN_PLACEHOLDER>",
-          "ANTHROPIC_BASE_URL": "https://dasuapi.com",
+          "ANTHROPIC_BASE_URL": "<CLAUDE_COMPATIBLE_BASE_URL>",
           "ANTHROPIC_DEFAULT_FABLE_MODEL": "claude-fable-5[1M]",
           "ANTHROPIC_DEFAULT_FABLE_MODEL_NAME": "claude-fable-5",
           "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-opus-4-8",
@@ -318,7 +318,7 @@
             {
               "hooks": [
                 {
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse",
                   "type": "command"
                 }
               ],
@@ -389,7 +389,7 @@
             {
               "hooks": [
                 {
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop",
                   "type": "command"
                 }
               ]
@@ -427,7 +427,7 @@
             {
               "hooks": [
                 {
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop",
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop",
                   "type": "command"
                 }
               ]
@@ -454,7 +454,7 @@
         },
         "theme": "dark"
       },
-      "website_url": "https://dasuapi.com",
+      "website_url": "<CLAUDE_COMPATIBLE_BASE_URL>",
       "category": null,
       "notes": null,
       "icon": "anthropic",
@@ -472,7 +472,7 @@
       "provider_type": null,
       "id": "<PROVIDER_ID>",
       "endpoints": [
-        "https://dasuapi.com"
+        "<CLAUDE_COMPATIBLE_BASE_URL>"
       ]
     },
     {
@@ -572,7 +572,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
                 }
               ]
             }
@@ -642,7 +642,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
                 }
               ]
             }
@@ -680,7 +680,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
                 }
               ]
             }
@@ -845,7 +845,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
                 }
               ]
             }
@@ -883,7 +883,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
                 }
               ]
             }
@@ -937,7 +937,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
                 }
               ]
             }
@@ -1083,7 +1083,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code stop"
                 }
               ]
             }
@@ -1121,7 +1121,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code subagentStop"
                 }
               ]
             }
@@ -1175,7 +1175,7 @@
               "hooks": [
                 {
                   "type": "command",
-                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=1013111 TEA_CHANNEL=cn TEA_APP_NAME_FOR_BITS=fluxisland ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
+                  "command": "[ -e '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' ] || exit 0; TEA_APP_ID=<TEA_APP_ID> TEA_CHANNEL=<TEA_CHANNEL> TEA_APP_NAME_FOR_BITS=<TEA_APP_NAME> ELECTRON_RUN_AS_NODE=1 '${FLUX_ISLAND_APP}/Contents/MacOS/Flux Island' '${FLUX_ISLAND_APP}/Contents/Resources/bin/flux-bits-report' claude-code postToolUse"
                 }
               ]
             }
